@@ -8,10 +8,12 @@ Add those to current dbt project
 ```packages.yml
 packages:
   ...
-  - package: re-data/re_data
-    version: [">=0.9.0", "<0.10.0"]
+  - git: "https://github.com/bachng2017/dbt-re-data.git"
+    revision: time-function-improve
   - git: "https://github.com/bachng2017/dbt-re-data-trino.git"
 ```
+
+Notes: Currently a PR is made to re-data. 
 
 and this
 ```dbt_project.yml
