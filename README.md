@@ -8,6 +8,8 @@ Add those to current dbt project
 ```packages.yml
 packages:
   ...
+  - package: "dbt-labs/dbt_utils"
+    version: "0.8.6"
   - git: "https://github.com/re-data/dbt-re-data.git"
   - git: "https://github.com/bachng2017/dbt-re-data-trino.git"
 ```
@@ -20,7 +22,13 @@ dispatch:
     search_order:
       - re_data_trino
       - re_data
+  - macro_namespace: dbt_utils
+    search_order:
+      - trino_utils
+      - dbt_utils
 ```
+
+Notes: `dbt_utils` package is necessary
 
 install dbt packages by running
 ```
