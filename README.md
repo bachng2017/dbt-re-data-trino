@@ -26,9 +26,13 @@ dispatch:
     search_order:
       - trino_utils
       - dbt_utils
+  - macro_namespace: fivetran_utils
+    search_order:
+      - re_data_trino
+      - fivetran_utils
 ```
 
-Notes: `dbt_utils` package is necessary
+Notes: `dbt_utils` package is necessary. `fivetran_utils` will be installed automatically by dbt-re-data
 
 install dbt packages by running
 ```
