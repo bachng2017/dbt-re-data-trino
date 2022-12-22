@@ -26,6 +26,7 @@ dispatch:
       - re_data
   - macro_namespace: dbt_utils
     search_order:
+      - re_data_trino
       - trino_utils
       - dbt_utils
   - macro_namespace: fivetran_utils
@@ -34,7 +35,11 @@ dispatch:
       - fivetran_utils
 ```
 
-Notes: `dbt_utils`,`trino_utils` packages are necessary. `fivetran_utils` will be installed automatically by dbt-re-data
+Notes: 
+  - `dbt_utils`,`trino_utils` packages are necessary. `fivetran_utils` will be installed automatically by dbt-re-data
+  - until `current_timestamp_in_utc` is implemented by dbt Core, a temporary macro is provided by this package. Hence, `re_data_trino` need to be prior to `dbt_utils` in it's namespace
+
+
 
 install dbt packages by running
 ```
