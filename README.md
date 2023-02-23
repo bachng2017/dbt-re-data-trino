@@ -38,6 +38,7 @@ dispatch:
 Notes: 
   - `dbt_utils`,`trino_utils` packages are necessary. `fivetran_utils` will be installed automatically by dbt-re-data
   - until `current_timestamp_in_utc` is implemented by dbt Core, a temporary macro is provided by this package. Hence, `re_data_trino` need to be prior to `dbt_utils` in it's namespace
+  - untin `urrent_timestamp_backcompat` is implement by dbt-trino-util, `re_data_trino` need to be prior `dbt` it it's namespace (for dbt_utils > 1.0.0)
 
 
 
