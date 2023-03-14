@@ -1,5 +1,8 @@
 # dbt-re-data-trino Changelog
 
+## 0.10.6
+- fix FORMAT_DATETIME(again)
+
 ## 0.10.5
 - fix FORMAT_DATETIME 
 
