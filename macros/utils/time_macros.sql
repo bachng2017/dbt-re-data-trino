@@ -12,7 +12,7 @@
 {% endmacro %}
 
 {% macro trino__format_timestamp(column_name) %}
-    FORMAT_DATETIME({{column_name}}, '%Y-%m-%d %H:%i:%S')
+    FORMAT_DATETIME({{column_name}}, 'YYYY-MM-dd HH:mm:ss')
 {% endmacro %}
 
 {% macro trino__in_date_window(target, start_date, end_date) %}
